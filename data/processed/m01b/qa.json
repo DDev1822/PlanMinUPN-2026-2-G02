@@ -1,0 +1,78 @@
+{
+  "group": "G02",
+  "project": "Pampa Norte",
+  "dataset": "DS02/EXP03",
+  "p2_grid_shape": [
+    37,
+    35,
+    375
+  ],
+  "p2_origin_m": [
+    242342.62969373562,
+    8196192.574427972,
+    2990.4449489083745
+  ],
+  "p2_cell_size_m": [
+    20.615528128083973,
+    20.615528128083973,
+    1.4862896509547885
+  ],
+  "blocks": 485625,
+  "composites": 8027,
+  "topography_sha256": "6b150af3656c1bd7832b78e965af82ab10f48ac82126f700b740be9ff573b7f1",
+  "topo_band_z_units": 18.119215791090028,
+  "topo_edge_limit_xy_units": 29.15475947422038,
+  "topography": {
+    "tin_points": 218112,
+    "tin_triangles": 436181,
+    "numerical_translation_xy": [
+      242090.504105,
+      8195892.194946
+    ],
+    "max_footprint_area_error": 1.3642420526593924e-12,
+    "fully_covered_columns": 1295,
+    "edge_supported_columns": 1223
+  },
+  "topo_status_counts": {
+    "ROCK": 293263,
+    "TOPO_UNCERTAIN": 68364,
+    "AIR": 123998
+  },
+  "nominal_topo_counts": {
+    "ROCK": 325545,
+    "PARTIAL": 13011,
+    "AIR": 147069
+  },
+  "lithology": {
+    "method": "NEAREST_C2_MIDPOINT_PER_LITERAL_CODE",
+    "radius_m": 29.19261990514346,
+    "ambiguity_band_m": 1.4862896509547885,
+    "unique_literal_codes": [
+      "AIR",
+      "OVB",
+      "POR",
+      "VOL"
+    ],
+    "rock_centers": 293263,
+    "status_counts": {
+      "UNASSIGNED": 236706,
+      "ASSIGNED": 54993,
+      "AMBIGUOUS": 1564
+    },
+    "reason_counts": {
+      "NO_SUPPORT_WITHIN_CELL_DIAGONAL": 236706,
+      "SUPPORTED_CATEGORICAL_ASSIGNMENT": 54993,
+      "AMBIGUOUS_LITERAL_CODES": 1564
+    }
+  },
+  "lith_status_counts": {
+    "UNASSIGNED": 236706,
+    "NOT_ELIGIBLE": 192362,
+    "ASSIGNED": 54993,
+    "AMBIGUOUS": 1564
+  },
+  "formal_crs": "UNKNOWN",
+  "vertical_datum": "UNKNOWN",
+  "p3_decision": "DD approval in chat 2026-11-15; see teacher closure dossier",
+  "p4_scope": "PRELIMINARY_LITERAL_CATEGORICAL_NOT_GEOLOGIC_SOLIDS"
+}

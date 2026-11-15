@@ -1,20 +1,18 @@
 # PlanMinUPN 2026-2 · G02 Pampa Norte
 
-Distribución independiente del grupo G02, release académico **DS02/EXP03**. Árbol preparado desde [`fernando-1809/PLAN-MIN-UPN-GRUPO-2`](https://github.com/fernando-1809/PLAN-MIN-UPN-GRUPO-2/commit/85d384f9aedc34d10d47f4fa6aca0625551e7015) en el SHA `85d384f9aedc34d10d47f4fa6aca0625551e7015`. Este repositorio empieza con un commit propio; no importa el historial del equipo anterior.
+Distribución independiente de G02, proyecto sintético **DS02/EXP03**. El árbol inicial procede del HEAD estudiantil `85d384f9aedc34d10d47f4fa6aca0625551e7015`; los resultados IMP-008 de este repositorio se calcularon con sus datos propios. No se importó el historial anterior ni se usaron tonelajes de otro grupo.
 
 ## Inicio
 
-1. Clona este repositorio y abre su raíz en PyCharm.
-2. Usa Python 3.12. Crea un entorno virtual e instala `python -m pip install -r requirements.txt`.
-3. Ejecuta `python -m pytest -q` para comprobar la distribución.
-4. Selecciona **Kai Planeamiento** desde `.github/agents/kai-planeamiento.agent.md` en Copilot. Consulta `AGENTS.md` y la guía del grupo.
+1. Clona el repositorio y abre la raíz en PyCharm con Python 3.12.
+2. Instala dependencias con `python -m pip install -r requirements.txt`.
+3. Ejecuta `python -m pytest -q` y `python -m src.missions.g02 verificar`.
+4. Abre `index.html` para E1, M01B, S11 y S12. Selecciona el agente `.github/agents/kai-planeamiento.agent.md` en Copilot.
 
-Los datos fuente están en `data/raw/`. El visor M01 y sus salidas pertenecen a este grupo; esta distribución no acredita un M01B cuantitativo. `.kai_local/` contiene progreso individual local y no debe publicarse.
+`data/raw/` contiene el release DS02/EXP03 y la topografía adicional Topopl, cuya procedencia se declara aparte. `data/processed/m01b/` contiene la malla histórica P2 de 485 625 celdas con clasificación P3 y asignación litológica preliminar P4. `outputs/g02_s11/` y `outputs/g02_s12/` contienen modelos académicos verificados por manifiesto, reportes, CSV y visores. La tabla completa está en CSV comprimido; los visores 3D muestran una selección para mantenerlos utilizables.
 
-## Alcance disponible
+## Regla espacial y alcance
 
-`docs/learning/GUIA_KAI_COMPARTIDA.md` y `kai/recorrido_academico.py` ofrecen 8 actividades E1, 16 S11 y 6 S12 como **teoría conceptual**. El progreso se conserva localmente por alias en SQLite y se exporta a Excel. El controlador comprueba estructura y secuencia; la valoración del razonamiento del estudiante corresponde al tutor.
+DD aprobó para este ejercicio un TIN local de Topopl, margen empírico ±18,119216 unidades Z y arista máxima de 29,154759 unidades XY. Las celdas `TOPO_UNCERTAIN` mantienen volumen y tonelaje nulos. CRS y datum permanecen desconocidos. P4 usa cercanía al compósito C2 y deja sin asignar lo ambiguo o lejano; no demuestra sólidos ni continuidad geológica. S11 usa IDW² como proxy académico; S12 compara inventario candidato y escenarios A/B sin secuencia física ni clasificación profesional de reservas. Véase `docs/STATUS.md`.
 
-Este grupo no tiene bajo IMP-008 un producto S11/S12 cuantitativo propio verificado. Tampoco están adaptadas la ficha E1 de 21 observaciones, la aplicación de 26 ni la entrega individual completa. No uses números, bloques o escenarios de G05 para suplirlos. Los modelos M01/M01B que sí existan son del proyecto Pampa Norte y conservan sus límites técnicos.
-
-La aceptación conversacional real de Kai y la revisión visual interactiva están pendientes.
+Kai ofrece 30 actividades, 21 observaciones E1 y 26 de aplicación, con registro individual local, Excel, informe y ZIP. La guía está en `docs/learning/GUIA_KAI_COMPARTIDA.md`; el controlador activo es `kai/recorrido_g02.py`. `.kai_local/` no se publica. La valoración semántica del alumno corresponde al tutor; la aceptación conversacional real y cualquier aprobación institucional siguen pendientes.

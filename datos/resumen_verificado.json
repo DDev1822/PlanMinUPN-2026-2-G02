@@ -1,0 +1,54 @@
+{
+  "project": {
+    "group": "G02",
+    "name": "Pampa Norte",
+    "project_id": "pampa_norte",
+    "dataset": "DS02",
+    "release": "EXP03",
+    "synthetic_data": true
+  },
+  "source": {
+    "repo": "https://github.com/DDev1822/PlanMinUPN-2026-2-G02",
+    "branch": "main",
+    "commit": "02aa78cbf769ae18bcc557dd24bf7c16b5dc1125",
+    "role": "original_clean_baseline"
+  },
+  "exploration": {
+    "holes": 54,
+    "survey": 385,
+    "assays": 8002,
+    "lithology_intervals": 153,
+    "density_observations": 630,
+    "topography_points": 218112
+  },
+  "compositing": {
+    "target_length_m": 2,
+    "total": 8027,
+    "full": 7934,
+    "residual": 93,
+    "example": {
+      "hole_id": "PN-C01-001",
+      "contact_m": 10
+    }
+  },
+  "model": {
+    "block_size_m": [
+      20.615528128083973,
+      20.615528128083973,
+      1.4862896509547885
+    ],
+    "block_count": 485625,
+    "topography": {
+      "ROCK": 293263,
+      "TOPO_UNCERTAIN": 68364,
+      "AIR": 123998
+    },
+    "lithology": {
+      "ASSIGNED": 54993,
+      "UNKNOWN/UNASSIGNED": 430632
+    },
+    "professional_reserves_declared": false,
+    "quantitative_estimates_available": true,
+    "topography_uncertainty_policy": "DD_P3_G02_20261115"
+  }
+}

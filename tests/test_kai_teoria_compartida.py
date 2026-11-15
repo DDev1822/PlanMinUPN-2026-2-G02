@@ -1,4 +1,4 @@
-"""Comprueba persistencia conceptual sin generar resultados mineros."""
+"""Comprueba el recorrido G02 y la persistencia sin atribuir evaluación humana."""
 from __future__ import annotations
 import importlib
 import json
@@ -11,21 +11,24 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0,str(ROOT/'kai'))
 controller = importlib.import_module('recorrido_academico')
 theory = importlib.import_module('registro_teoria_v2')
+active = importlib.import_module('recorrido_g02')
 
 def test_identidad_y_contrato(tmp_path,monkeypatch):
-    monkeypatch.setattr(theory,'DATA',tmp_path/'private')
+    monkeypatch.setattr(active,'DATA',tmp_path/'private')
     state=controller.process({'operacion':'estado','alumno':'AlumnoDemo'})
     assert state['actividad_actual']=='E1.01'
     assert state['eventos']==0
-    assert state['controller_scope']=='SOLO_TEORIA_CONCEPTUAL'
-    assert state['productos_grupales']=={'S11':'NO_VERIFICADO','S12':'NO_VERIFICADO'}
+    assert state['controller_version']==1
+    assert all(state['productos_grupales'][s]['status']=='VALIDATED' for s in ('S11','S12'))
+    assert state['ficha_e1']['total']==21
+    assert state['aplicacion_individual_v3']['total']==26
     assert state['entrega_final_lista'] is False
     assert len(theory.ACTIVIDADES)==30
     assert [sum(a['etapa']==k for a in theory.ACTIVIDADES) for k in ('E1','S11','S12')]==[8,16,6]
     assert not any('G05' in json.dumps(a,ensure_ascii=False) or 'Santa Elena' in json.dumps(a,ensure_ascii=False) for a in theory.ACTIVIDADES)
 
 def test_rechazo_recuperacion_y_excel(tmp_path,monkeypatch):
-    monkeypatch.setattr(theory,'DATA',tmp_path/'private')
+    monkeypatch.setattr(active,'DATA',tmp_path/'private')
     alias='AlumnoDemo'
     base={'alumno':alias,'operacion':'registrar','actividad':'E1.01','estado':'DEMOSTRADO',
           'tipo_evidencia':'RAZONAMIENTO_PROPIO','criterio_observado':'Razón espacial propia'}

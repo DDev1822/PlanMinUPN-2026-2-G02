@@ -1,0 +1,196 @@
+{
+  "product": "Modelo de bloques de recursos ACADÉMICO",
+  "stage": "S11",
+  "run_id": "1bdc71adfd21abfcbfb3",
+  "total_blocks": 485625,
+  "grade_estimated_blocks": 4985,
+  "density_estimated_blocks": 54971,
+  "quantified_blocks": 54971,
+  "quantified_tonnage_t": 92288914.84685762,
+  "grade_and_tonnage_blocks": 4985,
+  "grade_supported_tonnage_t": 8325973.187768273,
+  "tonnage_weighted_cu_pct": 0.3520459949784881,
+  "missing_cu_blocks": 480640,
+  "grade_estimated_blocks_r50": 4744,
+  "observed_density_samples": 630,
+  "positioned_density_samples": 630,
+  "eligible_density_samples": 609,
+  "composite_count": 8027,
+  "eligible_complete_composites": 7645,
+  "inherited_topo_counts": {
+    "ROCK": 293263,
+    "TOPO_UNCERTAIN": 68364,
+    "AIR": 123998
+  },
+  "integrated_volume_counts": {
+    "FULL_ROCK_CONFIDENT": 293263,
+    "TOPO_UNCERTAIN_NO_VOLUME": 68364,
+    "AIR_EXCLUDED": 123998
+  },
+  "nominal_partial_blocks": 13011,
+  "topographically_uncertain_blocks": 68364,
+  "estimation_reasons": {
+    "NO_PRELIMINARY_DOMAIN": 238270,
+    "NO_CONFIDENT_ROCK_VOLUME": 192362,
+    "INSUFFICIENT_SUPPORT": 49999,
+    "ESTIMATED_IDW2": 4985,
+    "EXCLUDED_LITHOLOGY": 9
+  },
+  "units": {
+    "cu_pct": "%",
+    "mo_pct": "%",
+    "au_gt": "g/t",
+    "density": "t/m3",
+    "volume": "m3",
+    "tonnage": "t"
+  },
+  "limitations": [
+    "Litología preliminar; continuidad entre sondajes no demostrada.",
+    "Estimación en centro como proxy académico; soporte volumétrico no corregido.",
+    "CRS/datum topográfico no documentados; marco local P3 aprobado por DD para DS02.",
+    "Banda empírica máxima del holdout espacial y arista límite; celdas inciertas sin tonelaje.",
+    "Incertidumbre de estimación no cuantificada por IDW²."
+  ],
+  "source_qa": {
+    "group": "G02",
+    "dataset": "DS02",
+    "raw_counts": {
+      "collar": 54,
+      "survey": 385,
+      "assay": 8002,
+      "density": 630,
+      "lithology": 153
+    },
+    "composites": 8027,
+    "eligible_composites": 7645,
+    "density_samples": 630,
+    "eligible_density_samples": 609,
+    "m01b_blocks": 485625,
+    "m01_findings": [
+      {
+        "rule_id": "ASSAY-03",
+        "severity": "INFO",
+        "source_file": "assay.csv",
+        "row_number": null,
+        "hole_id": null,
+        "field": "mo_pct",
+        "observed_value": {
+          "zero_count": 8002,
+          "row_count": 8002
+        },
+        "message": "Conteo resumido de ceros; su significado no se interpreta."
+      },
+      {
+        "rule_id": "ASSAY-03",
+        "severity": "INFO",
+        "source_file": "assay.csv",
+        "row_number": null,
+        "hole_id": null,
+        "field": "au_gt",
+        "observed_value": {
+          "zero_count": 8002,
+          "row_count": 8002
+        },
+        "message": "Conteo resumido de ceros; su significado no se interpreta."
+      },
+      {
+        "rule_id": "DENS-03",
+        "severity": "INFO",
+        "source_file": "density.csv",
+        "row_number": null,
+        "hole_id": null,
+        "field": null,
+        "observed_value": {
+          "samples_by_hole": {
+            "PN-C01-001": 9,
+            "PN-C01-002": 12,
+            "PN-C01-003": 16,
+            "PN-C01-004": 17,
+            "PN-C01-005": 9,
+            "PN-C01-006": 10,
+            "PN-C01-007": 14,
+            "PN-C01-008": 18,
+            "PN-C01-009": 8,
+            "PN-C01-010": 9,
+            "PN-C01-011": 10,
+            "PN-C01-012": 14,
+            "PN-C01-013": 8,
+            "PN-C01-014": 9,
+            "PN-C01-015": 9,
+            "PN-C01-016": 12,
+            "PN-C02-001": 10,
+            "PN-C02-002": 11,
+            "PN-C02-003": 12,
+            "PN-C02-004": 15,
+            "PN-C02-005": 18,
+            "PN-C02-006": 18,
+            "PN-C02-007": 9,
+            "PN-C02-008": 9,
+            "PN-C02-009": 11,
+            "PN-C02-010": 13,
+            "PN-C02-011": 15,
+            "PN-C02-012": 16,
+            "PN-C02-013": 8,
+            "PN-C02-014": 8,
+            "PN-C02-015": 9,
+            "PN-C02-016": 11,
+            "PN-C02-017": 13,
+            "PN-C02-018": 16,
+            "PN-C02-019": 9,
+            "PN-C02-020": 9,
+            "PN-C02-021": 9,
+            "PN-C02-022": 9,
+            "PN-C02-023": 12,
+            "PN-C02-024": 15,
+            "PN-C02-025": 9,
+            "PN-C02-026": 8,
+            "PN-C02-027": 9,
+            "PN-C02-028": 10,
+            "PN-C02-029": 12,
+            "PN-C02-030": 15,
+            "PN-C03-001": 10,
+            "PN-C03-002": 16,
+            "PN-C03-003": 13,
+            "PN-C03-004": 9,
+            "PN-C03-005": 11,
+            "PN-C03-006": 12,
+            "PN-C03-007": 9,
+            "PN-C03-008": 18
+          },
+          "sample_count": 630
+        },
+        "message": "Resumen de cobertura observada de muestras de densidad por sondaje."
+      },
+      {
+        "rule_id": "REL-04",
+        "severity": "INFO",
+        "source_file": "alteration.csv",
+        "row_number": null,
+        "hole_id": null,
+        "field": null,
+        "observed_value": {
+          "row_count": 0
+        },
+        "message": "El archivo de alteration no contiene observaciones."
+      }
+    ],
+    "composite_xyz_reproduced": true,
+    "cu_reconciled": true,
+    "analytes_augmented_from_raw": [
+      "mo_pct",
+      "au_gt"
+    ],
+    "formal_crs": "UNKNOWN"
+  },
+  "volume_qa": {
+    "method": "P3_DD_APPROVED_CONSERVATIVE_FULL_OR_NULL",
+    "statuses": {
+      "FULL_ROCK_CONFIDENT": 293263,
+      "TOPO_UNCERTAIN_NO_VOLUME": 68364,
+      "AIR_EXCLUDED": 123998
+    },
+    "partial_fraction_model": "NOT_APPLIED; uncertain has null rock volume",
+    "topography_crs": "UNKNOWN",
+    "vertical_datum": "UNKNOWN"
+  }
+}
