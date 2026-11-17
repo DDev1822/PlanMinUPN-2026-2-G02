@@ -21,3 +21,12 @@ S11 enseña vecino cercano, IDW, variogramas, kriging, cokriging y simulación c
 S12 presenta mineral y desmonte **candidatos**, capacidades, flota y CAPEX/OPEX en A/B. La regla G02-ALLOC-01 reparte proporcionalmente inventario elegible para comparar capacidad; no ofrece una secuencia física, pit ni reservas profesionales. La ausencia de clasificación conserva su estado sin convertirla en desmonte. La evaluación semántica del estudiante, la aceptación conversacional real en Copilot/PyCharm y la revisión docente siguen pendientes.
 
 ![DrillStone · símbolo](../assets/L3.png)
+
+## Contrato pedagógico vigente
+
+
+
+
+Al abrir una tutoría, usa internamente `kai/recorrido_g02.py inicio [alias]` con el intérprete configurado en PyCharm. Pide solo el alias pseudónimo si falta; recupera la actividad pendiente, enseña un concepto, formula una pregunta y espera. Los 21 campos de ficha E1 V2 son `SYSTEM_VERIFIED` y no generan preguntas de copia; las ocho competencias E1 conservan respuestas auténticas. La operación `responder_ficha_e1` ya no se utiliza.
+
+Para las 26 lecturas S11/S12 usa el enlace `consulta_estudiantil` y el `dato_verificado` del controlador, con unidad y generación. El alumno observa y responde con sus propias palabras; nunca lo envíes a JSON, CSV, manifiestos o comandos. Distingue lectura de dato e interpretación minera y no inventes respuestas. El visor estudiantil y la consulta se abren desde `docs/learning/RESULTADOS_G02.html`.

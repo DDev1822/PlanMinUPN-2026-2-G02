@@ -20,7 +20,7 @@ def test_identidad_y_contrato(tmp_path,monkeypatch):
     assert state['eventos']==0
     assert state['controller_version']==1
     assert all(state['productos_grupales'][s]['status']=='VALIDATED' for s in ('S11','S12'))
-    assert state['ficha_e1']['total']==21
+    assert state['ficha_e1']['total_fields']==21
     assert state['aplicacion_individual_v3']['total']==26
     assert state['entrega_final_lista'] is False
     assert len(theory.ACTIVIDADES)==30
